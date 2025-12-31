@@ -169,7 +169,6 @@ section {
     }
 
     .images {
-        padding: 0;
 
         img:last-child {
             width: 30% !important;
@@ -222,14 +221,17 @@ section {
 
         .add {
 
+            width: 100%;
+
             img {
                 margin-right: 150px;
                 width: 130px;
             }
 
             h5 {
-                margin-left: -100px;
+                margin-right: 150px !important;
                 margin-top: 8px;
+                width: 100%;
             }
         }
 
@@ -342,6 +344,35 @@ section {
         }
 
     }
+
+    .single-product .products {
+
+        .images {
+
+            img:last-child {
+                width: 30% !important;
+                margin-top: 50px;
+                margin-left: 50px;
+            }
+
+            img:nth-child(2) {
+                width: 30% !important;
+                margin-left: 30px;
+                margin-top: 50px;
+
+            }
+        }
+
+        .wish {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+
+            h5 {
+                font-size: 20px;
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -373,6 +404,30 @@ section {
 
             .time {
                 min-width: 80%;
+            }
+        }
+    }
+
+
+    .single-product .products {
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .images {
+
+            img:first-child {
+                width: 80% !important;
+                margin-left: 100px;
+            }
+
+            img:last-child {
+                width: 20% !important;
+            }
+
+            img:nth-child(2) {
+                width: 20% !important;
+
             }
         }
     }
@@ -435,7 +490,29 @@ section {
             grid-template-columns: 1fr;
         }
     }
+
+    .single-product .products {
+        .images {
+            img:first-child {
+                width: 80% !important;
+                margin-left: 40px !important;
+
+            }
+        }
+
+
+        .buttons {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            .wish {
+                grid-template-columns: .01fr 1fr !important;
+            }
+        }
+    }
 }
+
+
 
 @media screen and (max-width: 320px) {
     section {
@@ -484,5 +561,24 @@ section {
             }
         }
 
+    }
+
+    .single-product .products {
+        images{
+
+            img:first-child{
+                margin-right: -100px;
+            }
+        }
+
+        .buttons {
+
+            .add{
+                img{
+                    width: 50%;
+                    height: 40px;
+                }
+            }
+        }
     }
 }

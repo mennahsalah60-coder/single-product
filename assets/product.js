@@ -97,7 +97,7 @@ fetch(`https://dummyjson.com/products/${id}`)
 
         productsContainer.innerHTML =
             `<div class="images">
-                ${data.images.map(image => `<img class="w-100 rounded-4" src="${image}">`).join("")}
+                ${data.images.map(image => `<img class="rounded-4" src="${image}">`).join("")}
             </div>
 
             <div>
@@ -118,7 +118,7 @@ fetch(`https://dummyjson.com/products/${id}`)
                         <p>${data.discountPercentage}%. off</p>
                     </div>
                 </div>
-                <h5 class="mt-4 mb-4">
+                <h5 class="description mt-4 mb-4">
                     ${data.description}
                 </h5>
 
