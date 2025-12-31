@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>PhoneShop</title>
+</head>
+
+<body>
+    <section class="container">
+        <nav class="navbar bg-body-light">
+            <div>
+                <div class="nav">
+                    <div>
+                        <h1 class="mt-4">Our Product</h1>
+                        <p class="line"></p>
+                    </div>
+                    <div class="text-end cart">
+                        <img class="mt-4" src="./assets/images/counter.svg" class="" alt="">
+                        <p class="counter bg-primary text-light text-center pt-2"></p>
+                    </div>
+                </div>
+                <div class="timer text-light ms-4 me-4 mb-4">
+                    <div class="limit text-center pt-4 pb-2">
+                        <h4 class="">Limited Time Offer! Sale Ends In:</h4>
+                    </div>
+                    <div class="time m-2 text-center p-4">
+                        <div>
+                            <h1 class="hour">07</h1>
+                            <h5>HOURDS</h5>
+                        </div>
+                        <div>
+                            <h1 class="minute">23</h1>
+                            <h5>MINUTES</h5>
+                        </div>
+                        <div>
+                            <h1 class="secound">45</h1>
+                            <h5>SECOUNDS</h5>
+                        </div>
+                    </div>
+                    <div class="miss text-center">
+                        <h4 class="pb-3 pt-3">Don't Miss Out!</h4>
+                    </div>
+                </div>
+                <div class="inputs gap-2">
+                    <input class="search-input form-control me-2" type="search" placeholder="Search"
+                        aria-label="Search" />
+                    <button class="search-btn btn btn-outline-primary" type="submit">Search</button>
+                </div>
+                <div class="inputs mt-3 gap-2">
+                    <div class="all-price gap-2">
+                        <input class="max-price form-control" type="number" placeholder="max price">
+                        <input class="min-price form-control" type="number" placeholder="min price">
+                    </div>
+                    <div>
+                        <button class="price-btn btn btn-outline-primary h-100 w-100" type="submit">Search</button>
+                    </div>
+                </div>
+                <div>
+                    <button class="wishs btn btn-primary mt-3">My Favourites</button>
+                </div>
+            </div>
+        </nav>
+        <div class="all gap-2 products"></div>
+
+        <div class="loader flex">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </section>
+
+</body>
+<script src="./assets/script.js"></script>
+
+</html>
