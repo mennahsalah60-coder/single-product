@@ -8,7 +8,6 @@ console.log(id)
 const icons = {
     fav: "./assets/images/Favorite (1).svg",
     wish: "./assets/images/colored-favourite.svg",
-    cart: "./assets/images/Group 1.svg",
 };
 
 const cartProducts = JSON.parse(localStorage.getItem("cart")) || {}
@@ -53,7 +52,7 @@ const RemoveFromCart = (btn, id) => {
     btn.classList.add("btn-primary");
     btn.classList.remove("btn-danger");
     btn.innerHTML = `
-        <img src="${icons.cart}">`
+        <h5>Add to Cart</h5>`
     btn.onclick = () => AddToCart(btn, id);
     counter.textContent = Object.keys(cartProducts).length;
     updataCounters()
@@ -148,7 +147,7 @@ fetch(`https://dummyjson.com/products/${id}`)
                     <div class="buttons">
                         <button class="btn btn-primary add ${cartProducts[data.id] ? 'btn-danger' : 'btn-primary'}" "
                             onclick="${cartProducts[data.id] ? `RemoveFromCart(this, ${data.id})` : `AddToCart(this, ${data.id})`}">
-                                ${cartProducts[data.id] ? '<h5>Remove From Cart</h5>' : `<img src="${icons.cart}">`}
+                                ${cartProducts[data.id] ? '<h5>Remove From Cart</h5>' : `<h5>Add to Cart</h5>`}
                         </button>
                         <button class="wish bg-light btn" onclick="${wishlist[data.id] ? `RemoveFromWish(this, ${data.id})` : `favourite(this, ${data.id})`}">
                             ${wishlist[data.id] ?

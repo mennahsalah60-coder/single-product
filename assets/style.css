@@ -103,6 +103,10 @@ section {
         margin-top: 40px;
 
         button {
+            border-radius: 0px 0px 0px 10px;
+        }
+
+        .wish {
             border-radius: 0px 0px 10px 0px;
         }
 
@@ -170,7 +174,7 @@ section {
 
     .images {
 
-        img:first-child{
+        img:first-child {
 
             width: 100%;
         }
@@ -569,17 +573,17 @@ section {
     }
 
     .single-product .products {
-        images{
+        images {
 
-            img:first-child{
+            img:first-child {
                 margin-right: -100px;
             }
         }
 
         .buttons {
 
-            .add{
-                img{
+            .add {
+                img {
                     width: 50%;
                     height: 40px;
                 }
