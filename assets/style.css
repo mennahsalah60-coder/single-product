@@ -170,6 +170,11 @@ section {
 
     .images {
 
+        img:first-child{
+
+            width: 100%;
+        }
+
         img:last-child {
             width: 30% !important;
             margin-top: 50px;
