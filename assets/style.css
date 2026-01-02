@@ -539,6 +539,11 @@ section {
             }
         }
     }
+
+    .loader {
+
+        width: 70%;
+    }
 }
 
 
@@ -620,5 +625,9 @@ section {
                 }
             }
         }
+    }
+
+    .loader {
+        width: 70%;
     }
 }
