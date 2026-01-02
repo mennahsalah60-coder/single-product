@@ -82,10 +82,23 @@ const RemoveFromWish = (btn, id) => {
     updataCounters()
 }
 
+// image 
+function changeMainImage(main) {
+    const mainImg = document.querySelector(".main-image");
+
+    mainImg.src = main.src;
+
+    document.querySelectorAll(".images img").forEach(img => {
+        img.classList.remove("active");
+    });
+
+    main.classList.add("active");
+}
 
 
 
-const productsContainer = document.querySelector(".products") //
+const productsContainer = document.querySelector(".products") 
+
 fetch(`https://dummyjson.com/products/${id}`)
     .then(res => res.json())
     .then((data) => {
@@ -95,8 +108,17 @@ fetch(`https://dummyjson.com/products/${id}`)
         }
 
         productsContainer.innerHTML =
-            `<div class="images">
-                ${data.images.map(image => `<img class="rounded-4" src="${image}">`).join("")}
+            `
+            <div>
+                <div class="mb-3 main-div">
+                <img class="main-image rounded-4" src="${data.images[0]}">
+            </div>
+            <div class="images">
+                ${data.images.map((image, index) => `
+                    <img class="rounded-4 main ${index === 0 ? 'active' : ''}" src="${image}"
+                    onclick="changeMainImage(this)">
+                `).join("")}
+                </div>
             </div>
 
             <div>
@@ -113,7 +135,7 @@ fetch(`https://dummyjson.com/products/${id}`)
                             $${someData.price_after_sale.toFixed(2)}
                         </span>
                     </h5>
-                    <div class="bg-danger text-light rounded-2">
+                    <div class="off bg-danger text-light rounded-2">
                         <p>${data.discountPercentage}%. off</p>
                     </div>
                 </div>
@@ -169,3 +191,4 @@ fetch(`https://dummyjson.com/products/${id}`)
             </div>
         `
     });
+

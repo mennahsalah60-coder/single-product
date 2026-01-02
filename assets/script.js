@@ -99,6 +99,7 @@ const RemoveFromWish = (btn, id) => {
 const displayProducts = (products) => {
     productsContainer.innerHTML = " "
     products.forEach(product => {
+        const specialClass = product.id === 127 ? 'special-product' : '';
         productsContainer.innerHTML += `
         <div class="card">
             <div class="h-100 img">
@@ -134,7 +135,7 @@ displayProducts(products)
 
 const getProductsFromAPI = () => {
     const spinner = document.querySelector(".loader")
-    fetch('https://dummyjson.com/products/search?q=smartphone&skip=8&limit=8')
+    fetch('https://dummyjson.com/products/search?q=smartphone&skip=1&limit=8')
         .then(res => res.json())
         .then(data => {
             products = data.products.map(product => ({

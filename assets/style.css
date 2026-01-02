@@ -13,20 +13,25 @@ section {
         display: grid !important;
         grid-template-columns: 1fr;
 
+        .single-nav {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr !important;
+        }
+
         .nav {
             display: grid;
             grid-template-columns: 1fr 1fr;
 
             img {
-                width: 10%;
+                width: 12%;
 
             }
 
             .counter {
-                width: 30px;
+                width: 25px;
                 height: 40px;
                 border-radius: 50%;
-                margin-left: 88%;
+                margin-left: 86%;
                 margin-top: -30px;
             }
         }
@@ -162,6 +167,16 @@ section {
     padding: 30px;
     font-family: "Barlow", sans-serif;
     font-style: normal;
+    font-family: 'Tektur', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    .main-image {
+        width: 80%;
+    }
+
+    .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 
 
     .rating {
@@ -174,23 +189,22 @@ section {
 
     .images {
 
-        img:first-child {
-
+        .main-img {
             width: 100%;
         }
 
-        img:last-child {
-            width: 30% !important;
+
+
+        img:nth-child(n+1) {
+            width: 60% !important;
             margin-top: 50px;
-            margin-left: 100px;
         }
 
-        img:nth-child(2) {
-            width: 30% !important;
-            margin-left: 100px;
-            margin-top: 50px;
-
+        .active {
+            border: 2px solid black;
+            padding: 10px;
         }
+
 
     }
 
@@ -358,14 +372,8 @@ section {
 
         .images {
 
-            img:last-child {
-                width: 30% !important;
-                margin-top: 50px;
-                margin-left: 50px;
-            }
-
-            img:nth-child(2) {
-                width: 30% !important;
+            img:nth-child(n+1) {
+                width: 70% !important;
                 margin-left: 30px;
                 margin-top: 50px;
 
@@ -423,21 +431,24 @@ section {
         display: grid;
         grid-template-columns: 1fr;
 
+
+        .main-image {
+            width: 50% !important;
+            margin-left: 25%;
+        }
+
         .images {
 
-            img:first-child {
-                width: 80% !important;
-                margin-left: 100px;
-            }
-
-            img:last-child {
-                width: 20% !important;
-            }
-
-            img:nth-child(2) {
-                width: 20% !important;
+            img:nth-child(n+1) {
+                width: 40% !important;
 
             }
+        }
+
+        .wish {
+
+            display: grid !important;
+            grid-template-columns: .01fr 1fr !important;
         }
     }
 }
@@ -501,12 +512,21 @@ section {
     }
 
     .single-product .products {
-        .images {
-            img:first-child {
-                width: 80% !important;
-                margin-left: 40px !important;
 
+        .main-image {
+            width: 80% !important;
+            margin-left: 40px !important;
+        }
+
+        .images {
+
+            img:nth-child(n+1) {
+                width: 50% !important;
             }
+        }
+
+        .prices .off {
+            width: 50%;
         }
 
 
@@ -573,11 +593,22 @@ section {
     }
 
     .single-product .products {
-        images {
 
-            img:first-child {
-                margin-right: -100px;
-            }
+        .main-image {
+            margin-right: -100px;
+        }
+
+        .images {
+            margin-right: 40px;
+        }
+
+        .images img:nth-child(n+1) {
+            width: 70% !important;
+        }
+
+        .prices .off {
+            width: 70%;
+            margin-left: 10%;
         }
 
         .buttons {
