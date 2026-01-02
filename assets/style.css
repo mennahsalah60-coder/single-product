@@ -13,10 +13,7 @@ section {
         display: grid !important;
         grid-template-columns: 1fr;
 
-        .single-nav {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr !important;
-        }
+        
 
         .nav {
             display: grid;
@@ -31,7 +28,7 @@ section {
                 width: 25px;
                 height: 40px;
                 border-radius: 50%;
-                margin-left: 86%;
+                margin-left: 88%;
                 margin-top: -30px;
             }
         }
