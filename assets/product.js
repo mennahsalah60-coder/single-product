@@ -97,7 +97,9 @@ function changeMainImage(main) {
 
 
 
-const productsContainer = document.querySelector(".products") 
+const productsContainer = document.querySelector(".products")
+const spinner = document.querySelector(".loader")
+
 
 fetch(`https://dummyjson.com/products/${id}`)
     .then(res => res.json())
@@ -106,7 +108,6 @@ fetch(`https://dummyjson.com/products/${id}`)
         const someData = {
             price_after_sale: data.price * (100 - (data.discountPercentage)) / 100,
         }
-
         productsContainer.innerHTML =
             `
             <div>
@@ -190,5 +191,9 @@ fetch(`https://dummyjson.com/products/${id}`)
                     </div>
             </div>
         `
+
+        // spinner
+        spinner.classList.remove("loader")
+        displayProducts(products)
     });
 
